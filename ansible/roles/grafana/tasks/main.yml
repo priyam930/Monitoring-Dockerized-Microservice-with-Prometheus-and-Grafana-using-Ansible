@@ -4,9 +4,9 @@
     dest: /home/ubuntu/grafana
 
 - name: Build Grafana image
-  command: docker build -t custom-grafana ./grafana
+  command: docker build -t custom-grafana .
   args:
-    chdir: /home/ubuntu/monitoring-project
+    chdir: /home/ubuntu/grafana
 
 - name: Run Grafana container
   docker_container:

@@ -4,9 +4,9 @@
     dest: /home/ubuntu/prometheus
 
 - name: Build Prometheus image
-  command: docker build -t custom-prometheus ./prometheus
+  command: docker build -t custom-prometheus .
   args:
-    chdir: /home/ubuntu/monitoring-project
+    chdir: /home/ubuntu/prometheus
 
 - name: Run Prometheus container
   docker_container:
