@@ -1,1 +1,7 @@
-i
+
+- hosts: localhost
+  become: yes
+  roles:
+    - prometheus
+    - node_exporter
+    - grafana
