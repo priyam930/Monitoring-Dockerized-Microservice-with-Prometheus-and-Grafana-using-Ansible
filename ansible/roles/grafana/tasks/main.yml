@@ -1,0 +1,17 @@
+- name: Copy Grafana
+  copy:
+    src: "{{ playbook_dir }}/../grafana"
+    dest: /home/ubuntu/grafana
+
+- name: Build Grafana image
+  command: docker build -t custom-grafana ./grafana
+  args:
+    chdir: /home/ubuntu/monitoring-project
+
+- name: Run Grafana container
+  docker_container:
+    name: grafana
+    image: custom-grafana
+    ports:
+      - "3000:3000"
+    restart_policy: always

@@ -1,0 +1,17 @@
+- name: Copy Node Exporter
+  copy:
+    src: "{{ playbook_dir }}/../node_exporter"
+    dest: /home/ubuntu/node_exporter
+
+- name: Build Node Exporter image
+  command: docker build -t custom-node-exporter ./node_exporter
+  args:
+    chdir: /home/ubuntu/monitoring-project
+
+- name: Run Node Exporter container
+  docker_container:
+    name: node_exporter
+    image: custom-node-exporter
+    ports:
+      - "9100:9100"
+    restart_policy: always
