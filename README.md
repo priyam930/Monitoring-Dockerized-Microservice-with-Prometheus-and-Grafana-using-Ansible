@@ -55,6 +55,8 @@ ansible/
 flask-microservice/
 ├── Dockerfile
 └── app.py
+
+
 🔗 Medium Blog
 👉 Step-by-Step Project Guide on Medium (https://medium.com/@priyamsanodiya340/monitoring-a-dockerized-microservice-application-with-prometheus-and-grafana-using-ansible-without-c19f88a0b182)
 
