@@ -23,19 +23,20 @@ ansible/
 ├── inventory.ini
 ├── playbook.yaml
 │
-├── prometheus/ # Prometheus files (Dockerfile, prometheus.yml)
+├── prometheus/           # Prometheus files (Dockerfile, prometheus.yml)
 │
-├── node_exporter/ # Node Exporter files (Dockerfile)
+├── node_exporter/        # Node Exporter files (Dockerfile)
 │
-├── grafana/ # Grafana files (Dockerfile)
+├── grafana/              # Grafana files (Dockerfile)
 │
 ├── roles/
-│ ├── docker/ # Docker install tasks
-│ ├── prometheus/ # Prometheus deploy tasks
-│ ├── node_exporter/ # Node Exporter deploy tasks
-│ └── grafana/ # Grafana deploy tasks
+│   ├── docker/           # Docker install tasks
+│   ├── prometheus/       # Prometheus deploy tasks
+│   ├── node_exporter/    # Node Exporter deploy tasks
+│   └── grafana/          # Grafana deploy tasks
 │
-└── flask-microservice/ # Microservice app files (Dockerfile, app.py)
+└── flask-microservice/   # Microservice app files (Dockerfile, app.py)
+
 
 
 
