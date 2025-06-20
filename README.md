@@ -1,58 +1,43 @@
 # Monitoring-Dockerized-Microservice-with-Prometheus-and-Grafana-using-Ansible
-)
-📖 Project Overview
-This project demonstrates how to monitor a Dockerized Flask microservice using Prometheus and Grafana.
-Key highlights:
+## 📖 Project Overview
+This project shows how to:
+- Create a Flask microservice with Prometheus metrics.
+- Build Prometheus, Node Exporter, and Grafana manually (without using DockerHub images).
+- Use Ansible to automate everything on **localhost**.
+- Monitor your microservice and visualize metrics on Grafana dashboards.
 
-No DockerHub images used (manual installation and custom Dockerfile builds)
+---
 
-Fully automated with Ansible on localhost
+## 🛠️ Tech Stack Used
+- Docker
+- Ansible
+- Prometheus
+- Grafana
+- Flask (Python)
 
-Flask microservice with Prometheus metrics integration
+---
 
-Real-time Grafana dashboards
-
-🛠️ Tech Stack
-Docker
-
-Ansible
-
-Prometheus
-
-Grafana
-
-Flask (Python)
-
-Node Exporter (Optional)
-
-📂 Folder Structure
-
+## 📂 Project Folder Structure
 ansible/
+│
 ├── inventory.ini
 ├── playbook.yaml
-├── prometheus/
-│   ├── Dockerfile
-│   └── prometheus.yml
-├── node_exporter/
-│   ├── Dockerfile
-├── grafana/
-│   ├── Dockerfile
+│
+├── prometheus/ # Prometheus files (Dockerfile, prometheus.yml)
+│
+├── node_exporter/ # Node Exporter files (Dockerfile)
+│
+├── grafana/ # Grafana files (Dockerfile)
+│
 ├── roles/
-│   ├── docker/
-│   │   └── tasks/
-│   │       └── main.yml
-│   ├── prometheus/
-│   │   └── tasks/
-│   │       └── main.yml
-│   ├── node_exporter/
-│   │   └── tasks/
-│   │       └── main.yml
-│   ├── grafana/
-│       └── tasks/
-│           └── main.yml
-flask-microservice/
-├── Dockerfile
-└── app.py
+│ ├── docker/ # Docker install tasks
+│ ├── prometheus/ # Prometheus deploy tasks
+│ ├── node_exporter/ # Node Exporter deploy tasks
+│ └── grafana/ # Grafana deploy tasks
+│
+└── flask-microservice/ # Microservice app files (Dockerfile, app.py)
+
+
 
 
 🔗 Medium Blog
