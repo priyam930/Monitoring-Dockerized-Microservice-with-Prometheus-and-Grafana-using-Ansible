@@ -26,9 +26,7 @@ Flask (Python)
 Node Exporter (Optional)
 
 📂 Folder Structure
-text
-Copy
-Edit
+
 ansible/
 ├── inventory.ini
 ├── playbook.yaml
